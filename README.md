@@ -55,3 +55,10 @@ Then open `http://localhost:8000`.
 ## Deploy
 
 The site is static and can be deployed to Vercel, Netlify, Cloudflare Pages, GitHub Pages or Render Static Site.
+
+
+## Website updates
+- Homepage positioning is written for non-technical businesses and focuses on everyday operational problems.
+- The three service names are AI Solutions & Development, Business Process Automation, and Custom Software & Systems.
+- Founder portrait is stored at `assets/raj-profile.png`.
+- The contact forms use `mailto:` to prepare an email in the visitor's email application; they do not submit to a server or store submissions. Configure a form backend before relying on website-hosted enquiry delivery.

@@ -193,3 +193,85 @@ a{color:inherit;text-decoration:none}
 .contact-mail:hover span {
   transform: translate(5px, -5px);
 }
+
+
+/* Small integration refinements: preserve the approved single-page design. */
+.site-header, .nav { min-width: 0; }
+.nav { flex-wrap: wrap; }
+.nav a { white-space: nowrap; }
+.optima-product { padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 5rem); }
+.optima-product-inner {
+  width: min(100%, 1180px); margin: 0 auto;
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 2rem; border-top: 1px solid rgba(16,20,22,.18); padding-top: 2rem;
+}
+.optima-product-inner > div { max-width: 720px; }
+.optima-product h2 { margin: .35rem 0 1rem; }
+.optima-product p:not(.eyebrow) { max-width: 650px; }
+.optima-product-link { display: inline-flex; align-items: center; gap: .8rem; white-space: nowrap; }
+img { max-width: 100%; }
+@media (max-width: 720px) {
+  .optima-product-inner { align-items: flex-start; flex-direction: column; gap: 1.25rem; }
+  .site-header { gap: 1rem; }
+}
+
+
+/* Navigation and section refinements; the approved homepage layout remains intact. */
+.nav { flex-wrap: wrap; min-width: 0; }
+.nav a { white-space: nowrap; }
+img, video, svg, canvas { max-width: 100%; }
+.optima-product { padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 5rem); background: var(--paper-2, #e7e2d8); }
+.optima-product-inner { width: min(100%, 1180px); margin: 0 auto; display: flex; align-items: end; justify-content: space-between; gap: 2rem; border-top: 1px solid rgba(11,12,14,.18); padding-top: 2rem; }
+.optima-product-copy { max-width: 720px; }
+.optima-product h2 { margin: .35rem 0 1rem; }
+.optima-product-copy p:not(.eyebrow) { max-width: 650px; line-height: 1.75; }
+.optima-product-link { display: inline-flex; align-items: center; gap: .8rem; white-space: nowrap; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: .45rem; }
+@media (max-width: 720px) {
+  .optima-product-inner { align-items: flex-start; flex-direction: column; gap: 1.25rem; }
+  .nav { gap: .8rem; }
+}
+
+
+/* Clarity-first homepage refinements */
+.hero-copy{width:min(72%, 900px);max-width:900px}
+.hero-art{right:2vw;width:25vw;opacity:.42;pointer-events:none}
+.static-hero-art{padding-left:2vw}
+.hero-word{font-size:clamp(42px,5.4vw,84px)}
+.hero-lede{max-width:650px}
+.service-number small{display:inline-block;margin-top:8px;color:#92969b;font:500 8px var(--mono);letter-spacing:.06em}
+.founder{padding:110px 7vw 120px;border-top:1px solid var(--line)}
+.founder-inner{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:minmax(220px,.72fr) 1.28fr;gap:8vw;align-items:center}
+.founder-photo-wrap{background:#e5dfd5;overflow:hidden;align-self:stretch;min-height:430px;display:flex;align-items:end;justify-content:center}
+.founder-photo{display:block;width:100%;height:100%;max-height:580px;object-fit:cover;object-position:center top;mix-blend-mode:multiply}
+.founder-copy h2{font:700 clamp(42px,5.5vw,76px)/.98 var(--display);letter-spacing:-.065em;margin:0 0 25px}
+.founder-copy h2 em{font-family:var(--serif);font-weight:400}
+.founder-copy p:not(.kicker){color:#565b60;font-size:15px;line-height:1.8;max-width:700px}
+.founder-copy .founder-lede{font-size:19px!important;color:var(--ink)!important;line-height:1.6!important}
+.founder-signoff{display:flex;align-items:baseline;gap:18px;border-top:1px solid var(--line);padding-top:18px;margin-top:30px}
+.founder-signoff span{font:italic 28px var(--serif)}
+.founder-signoff small{font:500 9px var(--mono);letter-spacing:.09em;color:#73777c}
+/* Keep the enquiry form dark and legible across screen sizes. */
+.contact-form{background:#111417;border:1px solid #30363b;padding:clamp(22px,3vw,38px);min-width:0}
+.contact-form label span{color:#b3bac0;font-size:9px}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;min-width:0;background:#171b1f;color:#f5f6f4;border:1px solid #353c42;border-radius:0;padding:13px 14px;font:400 14px var(--sans);margin-top:9px;outline:none}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#899198}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--blue);box-shadow:0 0 0 2px #12b8df22}
+.contact-form select option{background:#171b1f;color:#f5f6f4}
+.contact-form textarea{resize:vertical;min-height:140px}
+.form-bottom{gap:18px;align-items:center;flex-wrap:wrap}
+.contact-form .form-bottom span,.contact-form .form-status{color:#a8afb5}
+.contact-form .form-bottom button{background:var(--blue);color:var(--ink);border:0;padding:15px 18px;font:600 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.contact-form .form-bottom button:hover{background:#67d8ed}
+@media(max-width:900px){.hero-copy{width:82%}.hero-art{width:20vw;right:0;opacity:.22}.founder-inner{gap:5vw}.founder-photo-wrap{min-height:360px}}
+@media(max-width:600px){.hero{padding-top:125px;padding-bottom:95px;min-height:820px}.hero-copy{width:100%}.hero h1{font-size:clamp(52px,14vw,82px);max-width:100%;overflow-wrap:normal}.hero-art{right:-16vw;top:auto;bottom:70px;width:70vw;height:220px;min-height:0;opacity:.16}.hero-word{font-size:60px}.hero-foot{z-index:3}.hero-actions{align-items:flex-start;flex-direction:column;gap:20px}.founder{padding:75px 6vw}.founder-inner{grid-template-columns:1fr;gap:35px}.founder-photo-wrap{min-height:0;max-height:440px}.founder-photo{max-height:440px;object-fit:contain}.founder-copy h2{font-size:13vw}.contact{min-height:0}.contact-layout{margin-bottom:55px}.contact-form{padding:22px}.form-row{grid-template-columns:1fr}.service-number small{display:none}}
+
+.home-menu-toggle{display:none;background:transparent;border:1px solid var(--ink);color:var(--ink);padding:10px 12px;font:500 10px var(--mono);text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
+@media(max-width:900px){.site-header{gap:14px}.home-menu-toggle{display:block;margin-left:auto}.site-header .nav{display:none;position:absolute;top:100%;left:0;right:0;margin:0;padding:22px 6vw;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:18px;align-items:flex-start}.site-header .nav.is-open{display:flex}.site-header .header-cta{display:none}}
+
+
+/* Hero artwork scale only — preserve the approved homepage theme and typography. */
+.hero-art{right:2vw;width:31vw;opacity:.48;pointer-events:none}
+.static-hero-art{padding-left:2vw}
+.hero-word{font-size:clamp(58px,7.2vw,112px)}
+@media(max-width:900px){.hero-art{width:25vw;right:0;opacity:.28}}
+@media(max-width:600px){.hero-art{right:-12vw;width:66vw;opacity:.2}.hero-word{font-size:64px}}
